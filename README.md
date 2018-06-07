@@ -1,6 +1,6 @@
 # allaboutocad.github.io
 Web + Mobile Systems Design - Assignment B  
-Group: Feng, Yiyi & Jad  
+Group: Feng, Yiyi & Jad.
 
 ## Inspirations  
 **Yiyi:**  
