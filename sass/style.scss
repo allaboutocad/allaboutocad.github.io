@@ -1,22 +1,11 @@
+/*count the speed of rotation*/
 $year-in-second : 20; // 1 Earth year = 30 sec
-
 @function revolution($pl-year-in-days){
   @return $pl-year-in-days * $year-in-second / 365.2563 + s  //Earth reference
-}
-@function alphaRandom(){
-  @return random(1000)*.001;
-}
-@function stars($s, $max-area, $min-area : 0, $star-size : 0){
-  $stars : #{$min-area + random($max-area)}px #{$min-area + random($max-area)}px 0 #{$star-size}px rgba(255,255,255, alphaRandom());
-  @for $i from 1 to $s{
-    $stars: '#{$stars} , #{$min-area + random($max-area)}px #{$min-area + random($max-area)}px 0 #{$star-size}px rgba(255,255,255, #{alphaRandom()})'
-  }
-  @return unquote($stars);
 }
 
 $center: 200px;
 $info_container_orb : 500px; $info_container_rad: 150px;
-
 
 html, body{
   height:100%;
@@ -39,6 +28,7 @@ body{
     background:white;
     border-radius:100px;
   }
+
   margin:0 auto;
   width:100%;
   height:100%;
@@ -52,7 +42,7 @@ body{
     &:not(.center){
       &:before{
         left:50%;
-        border-radius:100px;
+        border-radius:1000px;
         content:"";
         position:absolute;
       }
@@ -73,28 +63,64 @@ body{
   background-size: 175%;
 }
 
+.content{
+  background:black;
+  display:none;
+}
 .info_container{
   height:$info_container_orb;
   width:$info_container_orb;
   margin-top: -$info_container_orb / 2;
   margin-left: -$info_container_orb / 2;
-  animation: orb revolution(365.2563) linear infinite;
   &:before{
     height:$info_container_rad;
     width: $info_container_rad;
-    background:blue;
     margin-top: -$info_container_rad / 2;
     width: -$info_container_rad / 2;
   }
+}
 
+.one{
+  animation: orb1 revolution(365.2563) linear infinite;
+  &:before{
+    background:yellow;
+  }
+}
+.two{
+  animation: orb2 revolution(365.2563) linear infinite;
+  &:before{
+    background:blue;
+  }
+}
+.three{
+  animation: orb3 revolution(365.2563) linear infinite;
+  &:before{
+    background:green;
+  }
 }
 
 /*Here is animation*/
-@keyframes orb{
+@keyframes orb1{
   from {
     transform:rotate(0deg)
   }
   to{
     transform:rotate(-360deg)
+  }
+}
+@keyframes orb2{
+  from {
+    transform:rotate(-120deg)
+  }
+  to{
+    transform:rotate(-480deg)
+  }
+}
+@keyframes orb3{
+  from {
+    transform:rotate(-240deg)
+  }
+  to{
+    transform:rotate(-600deg)
   }
 }

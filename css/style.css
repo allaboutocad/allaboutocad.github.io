@@ -1,3 +1,4 @@
+/*count the speed of rotation*/
 html, body {
   height: 100%;
   width: 100%; }
@@ -29,7 +30,7 @@ body {
     z-index: 999; }
     .solar-syst div:not(.center):before {
       left: 50%;
-      border-radius: 100px;
+      border-radius: 1000px;
       content: "";
       position: absolute; }
 
@@ -45,24 +46,51 @@ body {
   background-position: -28px -103px;
   background-size: 175%; }
 
+.content {
+  background: black;
+  display: none; }
+
 .info_container {
   height: 500px;
   width: 500px;
   margin-top: -250px;
-  margin-left: -250px;
-  animation: orb 20s linear infinite; }
+  margin-left: -250px; }
   .info_container:before {
     height: 150px;
     width: 150px;
-    background: blue;
     margin-top: -75px;
     width: -75px; }
 
+.one {
+  animation: orb1 20s linear infinite; }
+  .one:before {
+    background: yellow; }
+
+.two {
+  animation: orb2 20s linear infinite; }
+  .two:before {
+    background: blue; }
+
+.three {
+  animation: orb3 20s linear infinite; }
+  .three:before {
+    background: green; }
+
 /*Here is animation*/
-@keyframes orb {
+@keyframes orb1 {
   from {
     transform: rotate(0deg); }
   to {
     transform: rotate(-360deg); } }
+@keyframes orb2 {
+  from {
+    transform: rotate(-120deg); }
+  to {
+    transform: rotate(-480deg); } }
+@keyframes orb3 {
+  from {
+    transform: rotate(-240deg); }
+  to {
+    transform: rotate(-600deg); } }
 
 /*# sourceMappingURL=style.css.map */
