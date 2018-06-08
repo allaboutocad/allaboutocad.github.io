@@ -1,0 +1,100 @@
+$year-in-second : 20; // 1 Earth year = 30 sec
+
+@function revolution($pl-year-in-days){
+  @return $pl-year-in-days * $year-in-second / 365.2563 + s  //Earth reference
+}
+@function alphaRandom(){
+  @return random(1000)*.001;
+}
+@function stars($s, $max-area, $min-area : 0, $star-size : 0){
+  $stars : #{$min-area + random($max-area)}px #{$min-area + random($max-area)}px 0 #{$star-size}px rgba(255,255,255, alphaRandom());
+  @for $i from 1 to $s{
+    $stars: '#{$stars} , #{$min-area + random($max-area)}px #{$min-area + random($max-area)}px 0 #{$star-size}px rgba(255,255,255, #{alphaRandom()})'
+  }
+  @return unquote($stars);
+}
+
+$center: 200px;
+$info_container_orb : 500px; $info_container_rad: 150px;
+
+
+html, body{
+  height:100%;
+  width:100%;
+}
+body{
+  font:normal 1em/1.45em "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background-attachment:fixed;
+}
+
+/*Here is about the parent container*/
+.solar-syst{
+  &:after{
+    content:"";
+    position:absolute;
+    height:2px;
+    width:2px;
+    top:-2px;
+    background:white;
+    border-radius:100px;
+  }
+  margin:0 auto;
+  width:100%;
+  height:100%;
+  position:relative;
+  div{
+    border-radius:1000px;
+    top:50%;
+    left:50%;
+    position:absolute;
+    z-index:999;
+    &:not(.center){
+      &:before{
+        left:50%;
+        border-radius:100px;
+        content:"";
+        position:absolute;
+      }
+    }
+  }
+}
+
+/*Here is for the elements*/
+.center{
+  background:red;
+  height:$center;
+  width:$center;
+  margin-top: -$center / 2;
+  margin-left: -$center / 2;
+  background-clip: padding-box;
+  border:0 !important;
+  background-position: -28px -103px;
+  background-size: 175%;
+}
+
+.info_container{
+  height:$info_container_orb;
+  width:$info_container_orb;
+  margin-top: -$info_container_orb / 2;
+  margin-left: -$info_container_orb / 2;
+  animation: orb revolution(365.2563) linear infinite;
+  &:before{
+    height:$info_container_rad;
+    width: $info_container_rad;
+    background:blue;
+    margin-top: -$info_container_rad / 2;
+    width: -$info_container_rad / 2;
+  }
+
+}
+
+/*Here is animation*/
+@keyframes orb{
+  from {
+    transform:rotate(0deg)
+  }
+  to{
+    transform:rotate(-360deg)
+  }
+}
