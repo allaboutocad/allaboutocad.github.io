@@ -40,7 +40,11 @@ preview below:
 ![](./img2.jpg)
 
 ## Moving Forward
+
 *June 10, 2018*
+
 **Adjusting Layout**
+
 New Layout :
+
 ![](./img3.jpg)
