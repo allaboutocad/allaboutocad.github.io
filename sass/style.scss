@@ -142,7 +142,7 @@ body{
     transform: rotate(36deg) translate(-15vh) rotate(-36deg);
   }
 }
-/**********************r***********/
+/*********************************/
 
 /*****style for 2nd version of rotation container***********/
 $circle-size:70vh;
@@ -167,7 +167,7 @@ $flake-count: 10;
     left: 40%;
     width: $circle-size;
     height: $circle-size;
-    background:green;
+    //background:green;
     &:hover > div{
       animation-play-state: paused;
     }
@@ -175,7 +175,7 @@ $flake-count: 10;
       width: 50vh;
       height: 50vh;
       border-radius: 50%;
-      background: blue;
+      //background: blue;
       position: relative;
       top: 10vh;
       left: 10vh;
@@ -188,6 +188,10 @@ $flake-count: 10;
       left: ($circle-size - $flake-size) / 2;
       transform: translate3d(0,0,0);
       z-index: 1;
+      &:hover{
+        -webkit-transform: scale(0.5);
+        transform:  scale(1.1);
+      }
       .flake{
         width: $flake-size;
         height: $flake-size;
@@ -234,8 +238,8 @@ $flake-count: 10;
 
     .flake {
       margin: #{$border}px;
-      width: $flake-size - $border * 2;
-      height: $flake-size - $border * 2;
+      //width: $flake-size - $border * 2;
+      //height: $flake-size - $border * 2;
       opacity: 0.4 + (0.6/$opacity);
       background-color: $color;
     }
