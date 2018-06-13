@@ -12,7 +12,13 @@ body {
   color: white;
   overflow: hidden;
 }
-
+/* Webgl position */
+canvas {
+  width: 10vh;
+  height: 3vh;
+  top: 3vh;
+  left: 40%;
+}
 /*Here is for the elements*/
 
 @-webkit-keyframes rainbow {
@@ -178,7 +184,7 @@ body {
       width: 50vh;
       height: 50vh;
       border-radius: 50%;
-      /* background: blue; */
+       /* background: blue; */
       position: relative;
       top: 10vh;
       left: 10vh; }
