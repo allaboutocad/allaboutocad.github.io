@@ -15,7 +15,74 @@ canvas {
   width: 10vh;
   height: 3vh;
   top: 3vh;
-  left: 40%; }
+  left: 40%;
+}
+
+/* Text position */
+.text {
+  position: fixed;
+  margin-top: 13%;
+  margin-left: 40px;
+  width: 35%;
+  z-index: 10;
+  text-align: justify;
+
+ }
+ .text_title{
+ font-weight: 500;
+ font-size: 21pt;
+ position: relative;
+  }
+  .text_subtitle1{
+  font-weight: 500;
+  font-size: 16pt;
+  margin-top: -12px;
+  color: white;
+   }
+  .text_subtitle2{
+   font-weight: 200;
+   margin-top: 12px;
+   font-size: 23pt;
+    -webkit-animation: textrainbow 5s infinite alternate;
+    }
+ .text_body {
+   position: relative;
+   margin-top: 32px;
+   font-size: 14pt;
+    font-weight: normal;
+    color: white;
+  }
+
+.socialmedia{
+  width: 100%;
+  position: fixed;
+  top: 100%;
+  left: 47px;
+  -webkit-transform: translateY(-70px);
+  -ms-transform: translateY(-70px);
+  transform: translateY(-70px);
+}
+
+.youtube{
+  width: 60px;
+  position: fixed;
+  left: 0px;
+}
+.twitter{
+  width: 60px;
+  position: fixed;
+  top: -2px;
+  left: 60px;
+}
+.instagram{
+  width: 200px;
+  position: fixed;
+  left: 190px;
+}
+
+
+
+/*Here is for the elements*/
 
 /* Text position */
 .text {
@@ -26,57 +93,50 @@ canvas {
   z-index: 10;
   text-align: justify; }
 
-.text_title {
-  font-weight: 500;
-  font-size: 21pt;
-  position: relative; }
+@-webkit-keyframes textrainbow {
+  0% {
+    color: hsl(1, 100%, 50%);
+  }
+  13% {
+    color: hsl(45, 100%, 50%);
+  }
+  25% {
+    color: hsl(90, 100%, 50%);
+  }
+  38% {
+    color: hsl(135, 100%, 50%);
+  }
+  50% {
+    color: hsl(180, 100%, 50%);
+  }
+  63% {
+    color: hsl(225, 100%, 50%);
+  }
+  75% {
+    color: hsl(270, 100%, 50%);
+  }
+  88% {
+    color: hsl(315, 100%, 50%);
+  }
+  100% {
+    color: hsl(360, 100%, 50%);
+  }
+}
 
-.text_subtitle1 {
-  font-weight: 500;
-  font-size: 16pt;
-  margin-top: -12px;
-  color: white; }
-
-.text_subtitle2 {
-  font-weight: 200;
-  margin-top: 12px;
-  font-size: 23pt;
-  -webkit-animation: textrainbow 5s infinite alternate; }
-
-.text_body {
-  position: relative;
-  margin-top: 32px;
-  font-size: 14pt;
-  font-weight: normal;
-  color: white; }
-
-.socialmedia {
-  width: 100%;
-  position: fixed;
-  top: 100%;
-  left: 47px;
-  -webkit-transform: translateY(-70px);
-  -ms-transform: translateY(-70px);
-  transform: translateY(-70px); }
-  .socialmedia .youtube {
-    width: 60px;
-    position: fixed;
-    left: 0px; }
-  .socialmedia .twitter {
-    width: 60px;
-    position: fixed;
-    top: -2px;
-    left: 60px; }
-  .socialmedia .instagram {
-    width: 200px;
-    position: fixed;
-    left: 190px; }
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 
 .logo {
   position: fixed;
   padding-top: 40px;
   padding-left: 40px;
-  width: 150px;
+  width: 170px;
   z-index: 10;
   transition: all 0.5s ease-in-out; }
   .logo:hover {
@@ -99,7 +159,8 @@ canvas {
   top: 40px;
   bottom: 40px;
   left: 40px;
-  right: 40px; }
+  right: 40px;
+  border: 0px solid #73ad21; }
   .wrapper .circle {
     position: absolute;
     top: 10vh;
