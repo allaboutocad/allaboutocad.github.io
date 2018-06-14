@@ -10,7 +10,7 @@ var Ctrl = function(_blob, _light, _pbr, _audio){
 		audio_gain: 70.
 	}
 
-	// var _g_blob = new dat.GUI();
+	 // var _g_blob = new dat.GUI();
 	var _g_scene = new dat.GUI();
 
 	this.blob = _blob;
@@ -27,14 +27,14 @@ var Ctrl = function(_blob, _light, _pbr, _audio){
     _g_scene.add(this.blob, 'show_hdr').onFinishChange( this.blob.toggle_cubemap.bind(this.blob) );
 
     // _g_blob.add(this.pbr, 'normal', 0., 5.);
-    // _g_blob.add(this.pbr, 'roughness', 0., 10.);
-    // _g_blob.add(this.pbr, 'metallic', 0., 10.);
-    // _g_blob.add(this.pbr, 'exposure', 0., 20.);
+     // _g_blob.add(this.pbr, 'roughness', 0., 10.);
+     // _g_blob.add(this.pbr, 'metallic', 0., 10.);
+     // _g_blob.add(this.pbr, 'exposure', 0., 20.);
     // _g_blob.add(this.pbr, 'gamma', 0., 10.);
 
     this.update_params();
 
-    // dat.GUI.toggleHide();
+     dat.GUI.toggleHide(); //turn on and off control panel
 };
 
 Ctrl.prototype.update_params = function(){
