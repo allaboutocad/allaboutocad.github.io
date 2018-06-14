@@ -39,7 +39,7 @@ NoiseBlob.prototype.update = function(){
     }
 
     // this.update_shadow_map();
-    this.update_cubemap();
+     this.update_cubemap();
 
     var _cam = this.renderer.get_camera();
     this.renderer.renderer.render( this.scene, _cam);
@@ -180,7 +180,7 @@ NoiseBlob.prototype.init_shader = function(){
 };
 
 NoiseBlob.prototype.init_texture = function(){
-    this.tex_sprite = new THREE.TextureLoader().load( "../common/assets/sprite_additive_rect.png" );
+    this.tex_sprite = new THREE.TextureLoader().load( "" );
     this.tex_sprite.wrapS = THREE.ClampToEdgeWrapping;
     this.tex_sprite.wrapT = THREE.ClampToEdgeWrapping;
     this.tex_sprite.magFilter = THREE.LinearFilter;
@@ -239,18 +239,18 @@ NoiseBlob.prototype.init_cubemap = function(){
     var _path = "";
     var _format = '';
     var _urls = [
-        _path + 'px_3js' + _format, _path + 'nx_3js' + _format,
-        _path + 'py_3js' + _format, _path + 'ny_3js' + _format,
-        _path + 'pz_3js' + _format, _path + 'nz_3js' + _format
+        // _path + 'px_3js' + _format, _path + 'nx_3js' + _format,
+        // _path + 'py_3js' + _format, _path + 'ny_3js' + _format,
+        // _path + 'pz_3js' + _format, _path + 'nz_3js' + _format
     ];
 
     this.cubemap = new THREE.CubeTextureLoader().load( _urls );
     this.cubemap.format = THREE.RGBFormat;
 
     _urls = [
-        _path + 'px' + _format, _path + 'nx' + _format,
-        _path + 'py' + _format, _path + 'ny' + _format,
-        _path + 'pz' + _format, _path + 'nz' + _format
+        // _path + 'px' + _format, _path + 'nx' + _format,
+        // _path + 'py' + _format, _path + 'ny' + _format,
+        // _path + 'pz' + _format, _path + 'nz' + _format
     ];
 
     this.cubemap_b = new THREE.CubeTextureLoader().load( _urls );
