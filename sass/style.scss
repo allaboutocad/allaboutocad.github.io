@@ -78,21 +78,18 @@ canvas {
   -webkit-transform: translateY(-70px);
   -ms-transform: translateY(-70px);
   transform: translateY(-70px);
-
-  .youtube{
+  div{
     width: 60px;
-    position: fixed;
+    position:fixed;
+  }
+  .youtube{
     left: 0px;
   }
   .twitter{
-    width: 60px;
-    position: fixed;
     top: -2px;
     left: 60px;
   }
   .instagram{
-    width: 200px;
-    position: fixed;
     left: 190px;
   }
 }
@@ -116,7 +113,7 @@ canvas {
 $circle-size:70vh;
 $flake-size:10vh;
 $circle-color: #1D1F20;
-$colors: #F1C40F, #F39C12, #2ECC71, #E74C3C, #3498DB;
+$colors:#f2cd72, #e76436, #d55124, #de5575, #c62a44, #d24587, #9933cc, #333399, #4362a7, #a0d7e3;
 $flake-count: 10;
 *, *::after, *::before { box-sizing: border-box; }
 .wrapper {
@@ -128,7 +125,6 @@ $flake-count: 10;
   bottom: 40px;
   left: 40px;
   right: 40px;
-  //border: 2px solid #73ad21;
   .circle {
     position: absolute;
     top: 10vh;
@@ -145,8 +141,6 @@ $flake-count: 10;
       position: relative;
       top: 10vh;
       left: 15vh;
-      background-color: blue;
-      //z-index:10;
       .overlay{
         position: absolute;
         top: 0;
@@ -156,13 +150,11 @@ $flake-count: 10;
         height: 100%;
         width: 100%;
         border-radius: 50%;
-        //opacity:0;
         -webkit-transition: opacity .5s ease-in-out;
         -moz-transition: opacity .5s ease-in-out;
         -ms-transition: opacity .5s ease-in-out;
         -o-transition: opacity .5s ease-in-out;
         transition: opacity .5s ease-in-out;
-        //background-color: #008CBA;
       }
 
     }
@@ -179,10 +171,11 @@ $flake-count: 10;
         height: $flake-size;
         border-radius: 50%;
         z-index: 5;
-        transition: transform .2s ease-in-out;
+        transition: all .8s ease-out;
         &:hover {
-          //background:yellow;
-          transform: scale(1.3);
+          background:white;
+          transform: scale(1.05);
+          box-shadow:0 0 .1em .1em white, 0 0 .08em .1em orange, 0 0 1em .15em yellow;
         }
 
         img{
@@ -209,7 +202,7 @@ $flake-count: 10;
   $border: random(10);
   $opacity: 1;
   $speed: 15;
-  $color-key: random( length($colors) );
+  $color-key: $i;
   $color: nth( $colors, $color-key );
 
   @keyframes flake-#{$i} {
@@ -235,14 +228,11 @@ $flake-count: 10;
       opacity: 0.4 + (0.6/$opacity);
       background-color: $color;
       //animation: inner_circle #{$speed}s linear infinite;
-      &:hover{
-        background: yellow;
-      }
     }
   }
-  .overlay--#{$i}{
-    opacity:1;
-    background-color: #008CBA;
+  #overlay--#{$i}{
+    opacity:0;
+    background-color: $color;
   }
 
 }
@@ -315,6 +305,7 @@ $flake-count: 10;
     transform: translateY(-2000px);
   }
 }
+
 @-webkit-keyframes rainbow {
   0% {
     fill: hsl(1, 100%, 50%);
@@ -336,6 +327,7 @@ $flake-count: 10;
   }
   75% {
     fill: hsl(270, 100%, 50%);
+
   }
   88% {
     fill: hsl(315, 100%, 50%);

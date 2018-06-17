@@ -78,31 +78,29 @@ document.addEventListener('DOMContentLoaded', function(){
         update();
     }
 });
+
 //here is for the mouse hover event listener
-// var myhover = document.getElementsByClassName("flakeWrapper--1");
-// var mytarget = document.getElementsByClassName("overlay--1");
-// function show(a){
-//   mytarget[a].setAttribute('style','opacity:1');
-// }
-// for (var i=0; i<myhover.length; i++){
-//   myhover[i].addEventListener('mouseover', show(i))
-// }
-// myhover.addEventListener('mouseover', function(){
-//   mytarget.setAttribute('style','opacity:1');
-//   console.log("this function was trigger");
-// }, false);
-var myhover = [];
+var myhover=[];
 var length = 10;
-myhover = document.getElementsByClassName("flakeWrapper");
-console.log(myhover);
-function show(a){
-  var id = 'overlay--' + (a+1);
-  var mytarget = document.getElementById(id);
-  console.log(mytarget);
-  // mytarget.style.opacity='1';
-  document.getElementById(id).style.opacity = "1";
+
+function getHover(){
+  for(var i=0; i<length; i++){
+    var id = "flakeWrapper--" + (i+1);
+    var myitem = document.getElementById(id);
+    myhover.push(myitem);
+  }
+  myhover.forEach(function(item,index){
+    item.addEventListener('mouseover',function(){
+      var targetID = "overlay--" + (index+1);
+      document.getElementById(targetID).style.opacity = "1";
+    },false);
+    item.addEventListener('mouseleave',function(){
+      var targetID = "overlay--" + (index+1);
+      document.getElementById(targetID).style.opacity = "0";
+    },false);
+  })
 }
 
-for(var i = 0; i<myhover.length; i++){
-  myhover[i].addEventListener('onclick', show(i),false);
-}
+window.addEventListener('load',function(){
+  getHover();
+});
