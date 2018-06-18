@@ -16,6 +16,7 @@ $shadows-big: multiple-box-shadow(100);
 /***** background stars *****/
 
 $social-size:4vw;
+$social-position: $social-size + 0.5vw;
 html, body{
   height:100%;
   width:100%;
@@ -78,9 +79,9 @@ canvas {
     top: 100%;
     left: 47px;
     z-index:10;
-    -webkit-transform: translateY(-#{$social-size});
-    -ms-transform: translateY(-#{$social-size});
-    transform: translateY(-#{$social-size});
+    -webkit-transform: translateY(-#{$social-position});
+    -ms-transform: translateY(-#{$social-position});
+    transform: translateY(-#{$social-position});
     .soc {
       display: block;
       font-size: 0;
