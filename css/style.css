@@ -86,6 +86,9 @@ canvas {
   z-index: 10;
   -webkit-animation: rainbow 5s infinite alternate; }
 
+.p{
+  top:100px;
+}
 /*****style for 2nd version of rotation container***********/
 *, *::after, *::before {
   box-sizing: border-box; }
@@ -182,7 +185,13 @@ canvas {
 
 #overlay--1 {
   opacity: 0;
-  background-color: #f2cd72; }
+  background-image: url('../images/jad.png');
+  background-size: contain;
+  width: 100%;
+  height: auto;
+  background-color: #f2cd72;
+  font-size: 1.25em;
+  text-align: center; }
 
 @keyframes flake-2 {
   0% {
@@ -201,11 +210,15 @@ canvas {
   .flakeWrapper--2 .flake {
     margin: 5px;
     opacity: 1;
-    background-color: #e76436; }
+    background-color: #d24587; }
 
 #overlay--2 {
   opacity: 0;
-  background-color: #e76436; }
+  background-image: url('../images/yiyi.jpg');
+  background-size: contain;
+  background-color: #d24587;
+  font-size: 1.25em;
+  text-align: center; }
 
 @keyframes flake-3 {
   0% {
@@ -224,11 +237,15 @@ canvas {
   .flakeWrapper--3 .flake {
     margin: 6px;
     opacity: 1;
-    background-color: #d55124; }
+    background-color: #9933cc; }
 
 #overlay--3 {
   opacity: 0;
-  background-color: #d55124; }
+  background-image: url('../images/feng.jpg');
+  background-size: contain;
+  background-color: #9933cc;
+  font-size: 1.25em;
+  text-align: center;}
 
 @keyframes flake-4 {
   0% {
