@@ -69,14 +69,14 @@ canvas {
   }
 
   //Here is for social icons
-  $social-size:4vw;
-  $social-position: $social-size + 0.5vw;
+  $social-size:55px;
+  $social-position: $social-size + 5px;
   .socialmedia{
     width: 100%;
     position: fixed;
     top: 100%;
     left: 47px;
-    z-index:10;
+    z-index:15;
     -webkit-transform: translateY(-#{$social-position});
     -ms-transform: translateY(-#{$social-position});
     transform: translateY(-#{$social-position});
