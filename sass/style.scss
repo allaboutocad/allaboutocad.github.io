@@ -15,6 +15,8 @@ $shadows-medium: multiple-box-shadow(200);
 $shadows-big: multiple-box-shadow(100);
 /***** background stars *****/
 
+$social-size:4vw;
+$social-position: $social-size + 0.5vw;
 html, body{
   height:100%;
   width:100%;
@@ -76,9 +78,10 @@ canvas {
     position: fixed;
     top: 100%;
     left: 47px;
-    -webkit-transform: translateY(-70px);
-    -ms-transform: translateY(-70px);
-    transform: translateY(-70px);
+    z-index:10;
+    -webkit-transform: translateY(-#{$social-position});
+    -ms-transform: translateY(-#{$social-position});
+    transform: translateY(-#{$social-position});
     .soc {
       display: block;
       font-size: 0;
@@ -91,8 +94,10 @@ canvas {
       }
       a{
         position: relative;
-        height: 4rem;
-        width: 4rem;
+        height: $social-size;
+        width: $social-size;
+        min-width: 40px;
+        max-width:60px;
         display: block;
       }
       svg{
