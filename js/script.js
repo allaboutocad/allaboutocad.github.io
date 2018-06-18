@@ -78,3 +78,29 @@ document.addEventListener('DOMContentLoaded', function(){
         update();
     }
 });
+
+//here is for the mouse hover event listener
+var myhover=[];
+var length = 10;
+
+function getHover(){
+  for(var i=0; i<length; i++){
+    var id = "flakeWrapper--" + (i+1);
+    var myitem = document.getElementById(id);
+    myhover.push(myitem);
+  }
+  myhover.forEach(function(item,index){
+    item.addEventListener('mouseover',function(){
+      var targetID = "overlay--" + (index+1);
+      document.getElementById(targetID).style.opacity = "1";
+    },false);
+    item.addEventListener('mouseleave',function(){
+      var targetID = "overlay--" + (index+1);
+      document.getElementById(targetID).style.opacity = "0";
+    },false);
+  })
+}
+
+window.addEventListener('load',function(){
+  getHover();
+});

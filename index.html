@@ -8,6 +8,7 @@
         <!--libraries-->
         <script type="text/javascript" src="common/lib/three.min.js"></script>
         <script type="text/javascript" src="common/lib/dat.gui.min.js"></script>
+        <script tyle="text/javascript" scr="js/jquery-3.3.1.slim.min.js"></script>
         <!--tools-->
         <script type="text/javascript" src="common/js/AudioAnalyzer.js"></script>
         <script type="text/javascript" src="common/js/ThreeSharedRenderer.js"></script>
@@ -22,8 +23,6 @@
         <!--objects-->
         <script type="text/javascript" src="js/NoiseBlob.js"></script>
         <script type="text/javascript" src="js/Ctrl.js"></script>
-        <!--main-->
-        <script type="text/javascript" src="js/script.js"></script>
 </head>
 
 <body>
@@ -55,7 +54,6 @@
     <path d="M0,99.1V309.2H210V99.1ZM195.5,294.7H14.5V113.6h181Z"/>
       </svg> </a>
     </div>
-
 
     <div class='socialmedia'>
         <div class='youtube'>
@@ -98,47 +96,39 @@
         </div>
 
     </div>
-    <!-- Main Container ~ Invisible -->
-    <!-- <div class = "galaxy"> -->
-    <!-- Planets Container ~ Spinning in slow roation -->
-      <!-- <div class='solar-syst'>
-        <div class='planet planet_one'><img class='people' src="http://www.dentoncorkermarshall.com/wp-content/uploads/2013/12/Asia-Square-06.jpg?x92178"><div class='content'>Jad Rabbaa</div></div>
-        <div class='planet planet_two'><img class='people' src="http://www.dentoncorkermarshall.com/wp-content/uploads/2013/12/Asia-Square-06.jpg?x92178"><div class='content'>Yiyi Shao</div></div>
-        <div class='planet planet_three'><img class='people' src="http://www.dentoncorkermarshall.com/wp-content/uploads/2013/12/Asia-Square-06.jpg?x92178"><div class='content'>Feng Yuan</div></div>
-        <div class='planet planet_four'></div>
-        <div class='planet planet_five'></div>
-        <div class='planet planet_six'></div>
-        <div class='planet planet_seven'></div>
-        <div class='planet planet_eight'></div>
-        <div class='planet planet_nine'></div>
-        <div class='planet planet_ten'><img class='people' src="http://www.dentoncorkermarshall.com/wp-content/uploads/2013/12/Asia-Square-06.jpg?x92178"><div class='marcus'>Marcus Gordon</div></div> -->
-        <!-- Center Container ~ Visible when one of the planets is clicked -->
-        <!-- <div class='planet sun'></div>
-      </div>
-    </div><!Here is the end of the 1st version-> -->
+
     <div class="wrapper">
       <div class='circle'>
-        <div class='circle_holder'></div>
-
-        <div class="flakeWrapper flakeWrapper--1"><div class="flake">
-          <img class='people' src="http://www.dentoncorkermarshall.com/wp-content/uploads/2013/12/Asia-Square-06.jpg?x92178">
-          <div class='content'>Jad Rabbaa</div></div></div>
-        <div class="flakeWrapper flakeWrapper--2"><div class="flake">
-          <img class='people' src="http://www.dentoncorkermarshall.com/wp-content/uploads/2013/12/Asia-Square-06.jpg?x92178">
-        <div class='content'>Yiyi Shao</div></div></div>
-        <div class="flakeWrapper flakeWrapper--3"><div class="flake">
-          <img class='people' src="http://www.dentoncorkermarshall.com/wp-content/uploads/2013/12/Asia-Square-06.jpg?x92178">
-        <div class='content'>Feng Yuan</div></div></div>
-        <div class="flakeWrapper flakeWrapper--4"><div class="flake"></div></div>
-        <div class="flakeWrapper flakeWrapper--5"><div class="flake"></div></div>
-        <div class="flakeWrapper flakeWrapper--6"><div class="flake"></div></div>
-        <div class="flakeWrapper flakeWrapper--7"><div class="flake"></div></div>
-        <div class="flakeWrapper flakeWrapper--8"><div class="flake"></div></div>
-        <div class="flakeWrapper flakeWrapper--9"><div class="flake"></div></div>
-        <div class="flakeWrapper flakeWrapper--10"><div class="flake"></div></div>
+        <div class='circle_holder'>
+          <div class="overlay" id="overlay--1">Jad Rabbaa</div>
+          <div class="overlay" id="overlay--2">Yiyi Shao</div>
+          <div class="overlay" id="overlay--3">Feng Yuan</div>
+          <div class="overlay" id="overlay--4"></div>
+          <div class="overlay" id="overlay--5"></div>
+          <div class="overlay" id="overlay--6"></div>
+          <div class="overlay" id="overlay--7"></div>
+          <div class="overlay" id="overlay--8"></div>
+          <div class="overlay" id="overlay--9"></div>
+          <div class="overlay" id="overlay--10"></div>
+        </div>
+        <div class="flakeWrapper flakeWrapper--1" id="flakeWrapper--1"><div class="flake">
+          <img class='people' src="images/jad.png">
+          <div class='content'></div></div></div>
+        <div class="flakeWrapper flakeWrapper--2" id="flakeWrapper--2"><div class="flake">
+          <img class='people' src="images/yiyi.jpg">
+        <div class='content'></div></div></div>
+        <div class="flakeWrapper flakeWrapper--3" id="flakeWrapper--3"><div class="flake">
+          <img class='people' src="images/feng.jpg">
+        <div class='content'></div></div></div>
+        <div class="flakeWrapper flakeWrapper--4" id="flakeWrapper--4"><div class="flake"></div></div>
+        <div class="flakeWrapper flakeWrapper--5" id="flakeWrapper--5"><div class="flake"></div></div>
+        <div class="flakeWrapper flakeWrapper--6" id="flakeWrapper--6"><div class="flake"></div></div>
+        <div class="flakeWrapper flakeWrapper--7" id="flakeWrapper--7"><div class="flake"></div></div>
+        <div class="flakeWrapper flakeWrapper--8" id="flakeWrapper--8"><div class="flake"></div></div>
+        <div class="flakeWrapper flakeWrapper--9" id="flakeWrapper--9"><div class="flake"></div></div>
+        <div class="flakeWrapper flakeWrapper--10" id="flakeWrapper--10"><div class="flake"></div></div>
       </div>
     </div>
-
     <!-- Another Main Container: seperately rotate-->
     <div class="text">
       <div class="text_title"> Web + Mobile System Design
@@ -152,12 +142,13 @@
       </div>
     </div>
 
-
-
     <!-- background -->
     <div class='starsbg' id='stars'></div>
     <div class='starsbg' id='stars2'></div>
     <div class='starsbg'id='stars3'></div>
-    <!-- sphere -->
-      <canvas></canvas>
+    <!-- background -->
+    <canvas></canvas>
+
+    <!--main-->
+    <script type="text/javascript" src="js/script.js"></script>
 </body></html>
