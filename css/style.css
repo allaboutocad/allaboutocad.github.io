@@ -60,100 +60,6 @@ canvas {
   left: 47px;
   -webkit-transform: translateY(-70px);
   -ms-transform: translateY(-70px);
-<<<<<<< HEAD
-  transform: translateY(-70px);
-}
-
-.youtube{
-  width: 60px;
-  position: fixed;
-  left: 0px;
-}
-.twitter{
-  width: 60px;
-  position: fixed;
-  top: -2px;
-  left: 60px;
-}
-.instagram{
-  width: 60px;
-  position: fixed;
-  left: 190px;
-}
-
-
-
-/*Here is for the elements*/
-
-@-webkit-keyframes rainbow {
-  0% {
-    fill: hsl(1, 100%, 50%);
-  }
-  13% {
-    fill: hsl(45, 100%, 50%);
-  }
-  25% {
-    fill: hsl(90, 100%, 50%);
-  }
-  38% {
-    fill: hsl(135, 100%, 50%);
-  }
-  50% {
-    fill: hsl(180, 100%, 50%);
-  }
-  63% {
-    fill: hsl(225, 100%, 50%);
-  }
-  75% {
-    fill: hsl(270, 100%, 50%);
-  }
-  88% {
-    fill: hsl(315, 100%, 50%);
-  }
-  100% {
-    fill: hsl(360, 100%, 50%);
-  }
-}
-
-@-webkit-keyframes textrainbow {
-  0% {
-    color: hsl(1, 100%, 50%);
-  }
-  13% {
-    color: hsl(45, 100%, 50%);
-  }
-  25% {
-    color: hsl(90, 100%, 50%);
-  }
-  38% {
-    color: hsl(135, 100%, 50%);
-  }
-  50% {
-    color: hsl(180, 100%, 50%);
-  }
-  63% {
-    color: hsl(225, 100%, 50%);
-  }
-  75% {
-    color: hsl(270, 100%, 50%);
-  }
-  88% {
-    color: hsl(315, 100%, 50%);
-  }
-  100% {
-    color: hsl(360, 100%, 50%);
-  }
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-=======
   transform: translateY(-70px); }
   .socialmedia div {
     width: 60px;
@@ -165,7 +71,6 @@ canvas {
     left: 60px; }
   .socialmedia .instagram {
     left: 190px; }
->>>>>>> 7271bc4f767bc9863824762fe313d2e7374a8054
 
 .logo {
   position: fixed;
