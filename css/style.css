@@ -61,6 +61,7 @@ canvas {
   -webkit-transform: translateY(-70px);
   -ms-transform: translateY(-70px);
 <<<<<<< HEAD
+<<<<<<< HEAD
   transform: translateY(-70px);
 }
 
@@ -155,6 +156,8 @@ canvas {
   }
 }
 =======
+=======
+>>>>>>> b771fcf0a9f2d53376fce016614e8a8b1f69f239
   transform: translateY(-70px); }
   .socialmedia div {
     width: 60px;
@@ -166,7 +169,6 @@ canvas {
     left: 60px; }
   .socialmedia .instagram {
     left: 190px; }
->>>>>>> 7271bc4f767bc9863824762fe313d2e7374a8054
 
 .logo {
   position: fixed;
