@@ -1,0 +1,21 @@
+#overlay--1 {
+  background-image: url('../images/jad.png');
+  background-size: contain;
+ }
+
+#overlay--2 {
+  background-image: url('../images/yiyi.jpg');
+  background-size: contain;
+}
+
+#overlay--3 {
+  background-image: url('../images/feng.jpg');
+  background-size: contain;
+}
+
+canvas {
+  position:absolute;
+  background: transparent;
+  z-index: 1;
+  top: 3vh;
+  left: 28vh; }
