@@ -15,6 +15,7 @@ $shadows-medium: multiple-box-shadow(200);
 $shadows-big: multiple-box-shadow(100);
 /***** background stars *****/
 
+$social-size:4vw;
 html, body{
   height:100%;
   width:100%;
@@ -70,29 +71,74 @@ canvas {
     color: white;
   }
 
-.socialmedia{
-  width: 100%;
-  position: fixed;
-  top: 100%;
-  left: 47px;
-  -webkit-transform: translateY(-70px);
-  -ms-transform: translateY(-70px);
-  transform: translateY(-70px);
-  div{
-    width: 60px;
-    position:fixed;
+  //Here is for social icons
+  .socialmedia{
+    width: 100%;
+    position: fixed;
+    top: 100%;
+    left: 47px;
+    z-index:10;
+    -webkit-transform: translateY(-#{$social-size});
+    -ms-transform: translateY(-#{$social-size});
+    transform: translateY(-#{$social-size});
+    .soc {
+      display: block;
+      font-size: 0;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li{
+        display: inline-block;
+        margin-right:1rem;
+      }
+      a{
+        position: relative;
+        height: $social-size;
+        width: $social-size;
+        min-width: 40px;
+        max-width:60px;
+        display: block;
+      }
+      svg{
+        height: 100%;
+        width: 100%;
+        display: block;
+      }
+    }
   }
-  .youtube{
-    left: 0px;
+  $icon-colors:#ff0000, #26b5d9, #d926b5;
+  @for $i from 1 through 3{
+    $icon-color-key: $i;
+    $icon-color: nth( $icon-colors, $icon-color-key );
+
+    .icon-#{$i}{
+      color: white;
+      fill: white;
+      &:hover{
+        border-radius: 100%;
+        color: #0e1a25;
+        fill: #0e1a25;
+        background-color: $icon-color;
+        -webkit-transform: scale(1.1);
+                transform: scale(1.1);
+        transition: background-color 0.5s, -webkit-transform 0.5s ease-out;
+        transition: background-color 0.5s, transform 0.5s ease-out;
+        transition: background-color 0.5s, transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
+      }
+    }
+    // .socialmedia ul li:hover > .icon-#{$i}{
+    //   border-radius: 100%;
+    //   color: #0e1a25;
+    //   fill: #0e1a25;
+    //   background-color: $icon-color;
+    //   -webkit-transform: scale(1.1);
+    //           transform: scale(1.1);
+    //   transition: background-color 0.5s, -webkit-transform 0.5s ease-out;
+    //   transition: background-color 0.5s, transform 0.5s ease-out;
+    //   transition: background-color 0.5s, transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
+    //
+    // }
   }
-  .twitter{
-    top: -2px;
-    left: 60px;
-  }
-  .instagram{
-    left: 190px;
-  }
-}
 
 .logo {
   position: fixed;
