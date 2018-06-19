@@ -30,18 +30,21 @@ body{
 }
 
 canvas {
-  width: 10vh;
-  height: 3vh;
+  position: absolute;
+  top:0vh;
+  left: 28vh;
+  width: 15vh;
+  height: 4.5vh;
+  z-index: -1;
 }
 /* Text position */
 .text {
-  position: fixed;
+  position: relative;
   margin-top: 13%;
   margin-left: 40px;
   width: 35%;
   z-index: 10;
   text-align: justify;
-
  }
  .text_title{
  font-weight: 500;
@@ -69,17 +72,19 @@ canvas {
   }
 
   //Here is for social icons
-  $social-size:55px;
+  $social-size:50px;
   $social-position: $social-size + 5px;
+  $social-padding: $social-size + 25px;
+
   .socialmedia{
     width: 100%;
     position: fixed;
     top: 100%;
-    left: 47px;
+    left: 40px;
     z-index:15;
-    -webkit-transform: translateY(-#{$social-position});
-    -ms-transform: translateY(-#{$social-position});
-    transform: translateY(-#{$social-position});
+    -webkit-transform: translateY(-#{$social-padding});
+    -ms-transform: translateY(-#{$social-padding});
+    transform: translateY(-#{$social-padding});
     .soc {
       display: block;
       font-size: 0;
@@ -129,7 +134,7 @@ canvas {
   position: fixed;
   padding-top: 40px;
   padding-left: 40px;
-  width: 150px;
+  width: 170px;
   z-index: 10;
   transition: all 0.5s ease-in-out;
   &:hover{
@@ -141,10 +146,10 @@ canvas {
   -webkit-animation: rainbow 5s infinite alternate;
 }
 /*****style for 2nd version of rotation container***********/
-$circle-size:70vh;
+$circle-size:85vh;
 $flake-size:10vh;
 $circle-color: #1D1F20;
-$colors:#f2cd72, #e76436, #d55124, #de5575, #c62a44, #d24587, #9933cc, #333399, #4362a7, #a0d7e3;
+$colors:#ffffff, #f12526, #fd8b18, #e9eb00, #7dc243, #4bb752, #44bd92, #23b0cc, #3c60ae, #554da0;
 $flake-count: 10;
 *, *::after, *::before { box-sizing: border-box; }
 .wrapper {
@@ -154,11 +159,11 @@ $flake-count: 10;
   align-items: center;
   top: 40px;
   bottom: 40px;
-  left: 40px;
-  right: 40px;
+  left: 0px;
+  right: 90px;
   .circle {
     position: absolute;
-    top: 10vh;
+    top: 0vh;
     left: 43%;
     width: $circle-size;
     height: $circle-size;
@@ -166,18 +171,18 @@ $flake-count: 10;
       animation-play-state: paused;
     }
     .circle_holder{
-      width: 50vh;
-      height: 50vh;
+      width: 60vh;
+      height: 60vh;
       border-radius: 50%;
       position: relative;
-      top: 10vh;
-      left: 15vh;
+      top: 13vh;
+      left: 17.5vh;
       .overlay{
         position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
         height: 100%;
         width: 100%;
         border-radius: 50%;
@@ -186,6 +191,17 @@ $flake-count: 10;
         -ms-transition: opacity .5s ease-in-out;
         -o-transition: opacity .5s ease-in-out;
         transition: opacity .5s ease-in-out;
+        .peoplecontent{
+          position: relative;
+          top: 50%;
+          transform: translateY(-50%);
+          margin-left: 90px;
+          margin-right: 90px;
+          text-align: center;
+          align-items: center;
+          vertical-align: middle;
+        }
+
       }
 
     }

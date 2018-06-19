@@ -1,24 +1,66 @@
 #overlay--1 {
-  background-image: url('../images/jad.png');
+  //background-image: url('https://canvas.ocadu.ca/images/thumbnails/1981121/b9EhBQL7q8j1odAMDYKR39M7ausuFpwB1xXrIJGx');
   background-size: contain;
+  background-color: #ffffff;
  }
 
 #overlay--2 {
-  background-image: url('../images/yiyi.jpg');
+  //background-image: url('../images/jad.png');
   background-size: contain;
+  background-color: #f12526;
 }
 
 #overlay--3 {
-  background-image: url('../images/feng.jpg');
+  //background-image: url('https://canvas.ocadu.ca/images/thumbnails/2509811/UDmdGI5k315spe0lDw2Hez0UvEyTtoofzCP6Czzg');
   background-size: contain;
+  background-color: #fd8b18;
+}
+
+#overlay--4 {
+  //background-image: url('https://canvas.ocadu.ca/images/messages/avatar-50.png');
+  background-size: contain;
+  background-color: #e9eb00;
+
+#overlay--5 {
+  //background-image: url('https://canvas.ocadu.ca/images/thumbnails/2508246/2ygkxii18DgR7wQTg3nSGt0d0wRfhiLB3lUK2Gmu');
+  background-size: contain;
+  background-color: #7dc243;
+}
+
+#overlay--6 {
+  //background-image: url('../images/yiyi.jpg');
+  background-size: contain;
+    background-color: #4bb752;
+}
+
+#overlay--7 {
+  //background-image: url('https://canvas.ocadu.ca/images/thumbnails/2519513/0Fmrs3DmPhfNpmmLFvw85TyWjPK1jfyJ3jom0QMD');
+  background-size: contain;
+    background-color: #44bd92;
+}
+
+#overlay--8 {
+  //background-image: url('https://canvas.ocadu.ca/images/thumbnails/2661010/QzsEtcVHgXgBSoMItEBPubzFDkU6J0cVIVMiuEP4');
+  background-size: contain;
+    background-color: #23b0cc;
+}
+
+#overlay--9 {
+  //background-image: url('https://canvas.ocadu.ca/images/messages/avatar-50.png');
+  background-size: contain;
+    background-color: #3c60ae;
+}
+
+#overlay--10 {
+  //background-image: url('../images/feng.jpg');
+  background-size: contain;
+  background-color: #554da0;
 }
 
 canvas {
   position: absolute;
   background: transparent;
   z-index: -1;
-  top: 3vh;
-  left: 28vh;
 }
 
 p{
